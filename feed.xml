@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2013-09-06T15:04:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Using rbenv</title>
+    <link rel="alternate" href="/2013/09/06/using-rbenv.html"/>
+    <id>/2013/09/06/using-rbenv.html</id>
+    <published>2013-09-06T15:04:00Z</published>
+    <updated>2013-09-06T15:04:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h4 id="upgrading"&gt;Upgrading&lt;/h4&gt;
+
+&lt;p&gt;If you've installed rbenv manually using git, you can upgrade your
+installation to the cutting-edge version at any time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-sh"&gt;$ cd ~/.rbenv
+$ git pull
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To use a specific release of rbenv, check out the corresponding tag:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-sh"&gt;$ cd ~/.rbenv
+$ git fetch
+$ git checkout v0.3.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="homebrew-on-mac-os-x"&gt;Homebrew on Mac OS X&lt;/h3&gt;
+
+&lt;p&gt;You can also install rbenv using the
+&lt;a href="http://brew.sh"&gt;Homebrew&lt;/a&gt; package manager on Mac OS
+X.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew update
+$ brew install rbenv
+$ brew install ruby-build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To later update these installs, use &lt;code&gt;upgrade&lt;/code&gt; instead of &lt;code&gt;install&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Afterwards you'll still need to add &lt;code&gt;eval "$(rbenv init -)"&lt;/code&gt; to your
+profile as stated in the caveats. You'll only ever have to do this
+once.&lt;/p&gt;
+
+&lt;h3 id="neckbeard-configuration"&gt;Neckbeard Configuration&lt;/h3&gt;
+
+&lt;p&gt;Skip this section unless you must know what every line in your shell
+profile is doing.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rbenv init&lt;/code&gt; is the only command that crosses the line of loading
+extra commands into your shell. Coming from RVM, some of you might be
+opposed to this idea. Here's what &lt;code&gt;rbenv init&lt;/code&gt; actually does:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sets up your shims path. This is the only requirement for rbenv to
+function properly. You can do this by hand by prepending
+&lt;code&gt;~/.rbenv/shims&lt;/code&gt; to your &lt;code&gt;$PATH&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Installs autocompletion. This is entirely optional but pretty
+useful. Sourcing &lt;code&gt;~/.rbenv/completions/rbenv.bash&lt;/code&gt; will set that
+up. There is also a &lt;code&gt;~/.rbenv/completions/rbenv.zsh&lt;/code&gt; for Zsh
+users.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Rehashes shims. From time to time you'll need to rebuild your
+shim files. Doing this automatically makes sure everything is up to
+date. You can always run &lt;code&gt;rbenv rehash&lt;/code&gt; manually.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Installs the sh dispatcher. This bit is also optional, but allows
+rbenv and plugins to change variables in your current shell, making
+commands like &lt;code&gt;rbenv shell&lt;/code&gt; possible. The sh dispatcher doesn't do
+anything crazy like override &lt;code&gt;cd&lt;/code&gt; or hack your shell prompt, but if
+for some reason you need &lt;code&gt;rbenv&lt;/code&gt; to be a real script rather than a
+shell function, you can safely skip it.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Run &lt;code&gt;rbenv init -&lt;/code&gt; for yourself to see exactly what happens under the
+hood.&lt;/p&gt;
+
+&lt;h3 id="uninstalling-ruby-versions"&gt;Uninstalling Ruby Versions&lt;/h3&gt;
+
+&lt;p&gt;As time goes on, Ruby versions you install will accumulate in your
+&lt;code&gt;~/.rbenv/versions&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;To remove old Ruby versions, simply &lt;code&gt;rm -rf&lt;/code&gt; the directory of the
+version you want to remove. You can find the directory of a particular
+Ruby version with the &lt;code&gt;rbenv prefix&lt;/code&gt; command, e.g. &lt;code&gt;rbenv prefix
+1.8.7-p357&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href="https://github.com/sstephenson/ruby-build"&gt;ruby-build&lt;/a&gt; plugin
+provides an &lt;code&gt;rbenv uninstall&lt;/code&gt; command to automate the removal
+process.&lt;/p&gt;
+
+&lt;h2 id="command-reference"&gt;Command Reference&lt;/h2&gt;
+
+&lt;p&gt;Like &lt;code&gt;git&lt;/code&gt;, the &lt;code&gt;rbenv&lt;/code&gt; command delegates to subcommands based on its
+first argument. The most common subcommands are:&lt;/p&gt;
+
+&lt;h3 id="rbenv-local"&gt;rbenv local&lt;/h3&gt;
+
+&lt;p&gt;Sets a local application-specific Ruby version by writing the version
+name to a &lt;code&gt;.ruby-version&lt;/code&gt; file in the current directory. This version
+overrides the global version, and can be overridden itself by setting
+the &lt;code&gt;RBENV_VERSION&lt;/code&gt; environment variable or with the &lt;code&gt;rbenv shell&lt;/code&gt;
+command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rbenv local 1.9.3-p327
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When run without a version number, &lt;code&gt;rbenv local&lt;/code&gt; reports the currently
+configured local version. You can also unset the local version:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rbenv local --unset
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Previous versions of rbenv stored local version specifications in a
+file named &lt;code&gt;.rbenv-version&lt;/code&gt;. For backwards compatibility, rbenv will
+read a local version specified in an &lt;code&gt;.rbenv-version&lt;/code&gt; file, but a
+&lt;code&gt;.ruby-version&lt;/code&gt; file in the same directory will take precedence.&lt;/p&gt;
+
+&lt;h3 id="rbenv-global"&gt;rbenv global&lt;/h3&gt;
+
+&lt;p&gt;Sets the global version of Ruby to be used in all shells by writing
+the version name to the &lt;code&gt;~/.rbenv/version&lt;/code&gt; file. This version can be
+overridden by an application-specific &lt;code&gt;.ruby-version&lt;/code&gt; file, or by
+setting the &lt;code&gt;RBENV_VERSION&lt;/code&gt; environment variable.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>蘋果正式發出媒體邀請函，將在美國時間9月10日舉辦iPhone發表會！</title>
+    <link rel="alternate" href="/2013/09/05/apple-iphone5s.html"/>
+    <id>/2013/09/05/apple-iphone5s.html</id>
+    <published>2013-09-05T15:56:00Z</published>
+    <updated>2013-09-05T15:56:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;根據The Loop網站報導，蘋果在今天正式寄出了媒體邀請函，將在美國時間2013年9月10日星期二，太平洋時間上午10點（台灣時間9月11日星期三凌晨1點），在蘋果Cupertino總部舉行下一代iPhone發表會。&lt;/p&gt;
+
+&lt;p&gt;上方從蘋果寄出的媒體邀請函，有許多彩色的平面化圓點圖示，幾乎呼應謠言中蘋果將推出平價、彩色版的iPhone 5C，並且直接搭載最新的iOS 7介面。&lt;/p&gt;
+
+&lt;p&gt;目前預期蘋果將在下週的發表會上推出下一代iPhone，命名為iPhone 5S，外形和iPhone 5差異不大，但是可能會搭載雙LED燈、升級相機鏡頭還有搭載指紋辨識掃瞄器在Home鍵上，另外就是內部硬體可能會升級處理器、記憶體等等，顏色上除了黑、白，更多了一款金色。另外還有會有平價、塑膠多彩顏色外殼的iPhone，命名為iPhone 5C，用來取代現行的iPhone 5（規格應該也和iPhone 5差不多），以下為謠言流出的iPhone 5C外盒包裝，還有對應顏色的彩色主畫面。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/iphone5s.jpg" alt="iPhone5S" /&gt;&lt;/p&gt;
+
+&lt;p&gt;而iPhone 5S和iPhone 5C真正的發售日期，預期和去年一樣，將在9月20日週五開始發售。&lt;/p&gt;
+
+&lt;p&gt;PS.由MacRumors網站報導，此iPhone發表會，將『不會』有新款的iPad或iPad mini一同發表。&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>潭美來襲　五楊高架發現30公尺裂縫　民眾直呼太危險</title>
+    <link rel="alternate" href="/2013/08/22/typhoon.html"/>
+    <id>/2013/08/22/typhoon.html</id>
+    <published>2013-08-21T16:00:00Z</published>
+    <updated>2013-08-21T16:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;社會中心／台北報導
+潭美侵台造成連日豪雨，有民眾行車時竟發現&lt;a href="http://"&gt;國道一號&lt;/a&gt;五股楊梅高架北上45.1公里處，有裂開情形，國工局表示，初步判斷應是潭美帶來的豪雨所致，目前正全力修復中。
+國道一號五股楊梅高架於今(2013)年4月29日始通車，沒想到不到半年時間，就有民眾於今(22)日發現高架道路北上45.1公里處（南崁靠近林口位置），路面出現龜裂現象，裂縫長度約30公尺，民眾直呼「太危險」。
+國工局回應，五楊高架北上路段45.150K~45.180K處的內側車道，確實有長達30公尺長的裂縫，初步研判應是颱風帶來的連日豪雨，造成地面含水量過高，過度飽和膨脹撐裂路面。
+國工局表示，五楊高架其他路段仍可正常行駛，目前仍在盤查路面龜裂因素，會立即修路。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>慢慢讀，詩／我們走在女路上</title>
+    <link rel="alternate" href="/2013/08/19/poem.html"/>
+    <id>/2013/08/19/poem.html</id>
+    <published>2013-08-18T16:00:00Z</published>
+    <updated>2013-08-18T16:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;【聯合報╱楊小濱】&lt;/p&gt;
+
+&lt;p&gt;遠遠跑來一條路，她用陽光
+ 撲倒了我。但我的老年
+ 根本看不上她積雨的鎖骨。&lt;/p&gt;
+
+&lt;p&gt;被強吻時，我嘔出了路的汁液。
+ 春天，路擰乾後更加沒趣。
+ 一踩秀髮，我就跌入蜘蛛地圖。&lt;/p&gt;
+
+&lt;p&gt;路抱緊我，彷彿我是她的恨；
+ 路抽打我的步伐，像玩撥浪鼓。&lt;/p&gt;
+
+&lt;p&gt;她招展的舌為我指方向：
+ 「過了晴天，不再會有江湖。」&lt;/p&gt;
+
+&lt;p&gt;我看不見正前方，因為路扭扭
+ 捏捏，好像光明會有劇毒。&lt;/p&gt;
+
+&lt;p&gt;但遠遠地，另一條路在招手：
+ 她的笑容也在另一邊，看上去像哭。&lt;/p&gt;
+
+&lt;p&gt;【2013/08/22 聯合報】@ http://udn.com/&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>勞委會：熱浪假應給業者自行調整, 不宜制定法律</title>
+    <link rel="alternate" href="/2012/01/01/example-article5.html"/>
+    <id>/2012/01/01/example-article5.html</id>
+    <published>2011-12-31T16:00:00Z</published>
+    <updated>2011-12-31T16:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;連日高溫，讓是否制訂「熱浪假」議題再次引發討論。勞委會主委潘世偉今（9）日表示，高溫假最適合的方式，應該是依雇主自行調整處理，不適宜用法律規範來制訂，儘管行政院要求主管單位評估，但潘世偉說，勞委會目前未研議也暫不考慮。&lt;/p&gt;
+
+&lt;p&gt;有電子媒體報導，不少民眾難以忍受酷熱天氣，希望政府能放熱浪假，自主工聯執行長朱維立受訪也指出，目前全球暖化嚴重，建議政府應規劃讓勞工放高溫假來保護勞工。不過也有業者對這樣的做法表達反彈。&lt;/p&gt;
+
+&lt;p&gt;潘世偉直言，「熱浪假」是少見的假，若目前氣溫過高放了「熱浪假」，是否到了冬天就要放「低溫假」？這些應該是依雇主自行調整處理，不適宜另從法律來進行規範。此外，儘管溫室效應造成氣溫不斷飆升，但目前世界各國都未針對高溫假立法。&lt;/p&gt;
+
+&lt;p&gt;但潘世偉強調，如何防止勞工在高溫環境工作，也是雇主所需負的責任。根據規範，雇主應提供飲水及適當休息場所，若員工患有對於有高血壓、心臟病、無汗症等，應設置急救人員和器材。&lt;/p&gt;
+
+&lt;p&gt;至於相關勞動檢查，則為地方政府權責，不過勞委會坦言，未符合相關規範遭罰的案例相當少，根據近3個月所稽查結果，僅發現北市發生一例業者重複違規情況，這也是北市首張高溫罰單。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>勞委會：熱浪假應給業者自行調整, 不宜制定法律</title>
+    <link rel="alternate" href="/2012/01/01/example-article4.html"/>
+    <id>/2012/01/01/example-article4.html</id>
+    <published>2011-12-31T16:00:00Z</published>
+    <updated>2011-12-31T16:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;連日高溫，讓是否制訂「熱浪假」議題再次引發討論。勞委會主委潘世偉今（9）日表示，高溫假最適合的方式，應該是依雇主自行調整處理，不適宜用法律規範來制訂，儘管行政院要求主管單位評估，但潘世偉說，勞委會目前未研議也暫不考慮。&lt;/p&gt;
+
+&lt;p&gt;有電子媒體報導，不少民眾難以忍受酷熱天氣，希望政府能放熱浪假，自主工聯執行長朱維立受訪也指出，目前全球暖化嚴重，建議政府應規劃讓勞工放高溫假來保護勞工。不過也有業者對這樣的做法表達反彈。&lt;/p&gt;
+
+&lt;p&gt;潘世偉直言，「熱浪假」是少見的假，若目前氣溫過高放了「熱浪假」，是否到了冬天就要放「低溫假」？這些應該是依雇主自行調整處理，不適宜另從法律來進行規範。此外，儘管溫室效應造成氣溫不斷飆升，但目前世界各國都未針對高溫假立法。&lt;/p&gt;
+
+&lt;p&gt;但潘世偉強調，如何防止勞工在高溫環境工作，也是雇主所需負的責任。根據規範，雇主應提供飲水及適當休息場所，若員工患有對於有高血壓、心臟病、無汗症等，應設置急救人員和器材。&lt;/p&gt;
+
+&lt;p&gt;至於相關勞動檢查，則為地方政府權責，不過勞委會坦言，未符合相關規範遭罰的案例相當少，根據近3個月所稽查結果，僅發現北市發生一例業者重複違規情況，這也是北市首張高溫罰單。&lt;/p&gt;
+</content>
+  </entry>
+</feed>
