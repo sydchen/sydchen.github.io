@@ -5718,34 +5718,34 @@ a.label:hover, a.badge:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 1, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 1, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 body {
   background-color: #425066;
   line-height: 28px;
   font-size: 18px; }
 
-/* line 7, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 7, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 header {
   margin-top: 30px; }
-  /* line 10, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+  /* line 9, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   header a:link, header a:visited {
     color: #000;
     text-decoration: none; }
 
-/* line 16, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 15, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .content {
   background-color: white;
   margin: 32px auto 32px auto;
   max-width: 1000px;
   padding-left: 30px; }
 
-/* line 23, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 22, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .main-content {
   margin-right: 1em;
   margin-bottom: 4em;
   padding: 0px 12px; }
 
-/* line 29, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 28, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .row-fluid .sidebar {
   position: relative;
   margin-left: 0px;
@@ -5753,49 +5753,49 @@ header {
   margin-bottom: 40px;
   float: right; }
 
-/* line 37, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 36, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .socials {
   margin-right: 12px; }
 
-/* line 41, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 40, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .nav a.social-networks {
   padding: 0; }
 
-/* line 45, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 44, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .metadata {
   font-size: 15px;
   margin-top: 20px;
   padding: 5px 0px;
   color: #666666; }
 
-/* line 52, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 51, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 article {
   padding-right: 60px; }
 
-/* line 56, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 55, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .recently {
   padding: 3px 5px;
   background-color: #f2f2f2;
   margin-bottom: 20px; }
 
-/* line 64, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 63, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 h3 a:link, h3 a:visited {
   color: #333333;
   text-decoration: none; }
 
-/* line 75, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 74, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 aside {
   margin-bottom: 60px;
   background-color: #EBF0F5; }
-  /* line 64, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+  /* line 63, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside a:link, aside a:visited {
     color: #333333;
     text-decoration: none; }
-  /* line 77, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+  /* line 76, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside p {
     font-size: 16px;
     line-height: 22px; }
-  /* line 82, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+  /* line 81, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside h4 {
     font-weight: normal;
     color: #fff;
@@ -5803,24 +5803,24 @@ aside {
     margin: 0px;
     padding: 6px;
     letter-spacing: 1px; }
-  /* line 91, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+  /* line 90, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside hr {
     margin: 10px 0;
     border-top: 1px solid #FFF;
     border-bottom: 1px solid #FFF; }
-  /* line 97, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+  /* line 96, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside .recently-articles {
     padding: 8px; }
-  /* line 98, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+  /* line 97, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside img {
     margin: 20px; }
 
-/* line 104, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 103, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 ul.tags {
   margin: 0;
   padding: 5px 8px;
   list-style: none; }
-  /* line 109, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+  /* line 108, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   ul.tags li {
     display: inline-block;
     margin: 4px 1px;
@@ -5831,14 +5831,14 @@ ul.tags {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; }
-    /* line 120, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+    /* line 119, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
     ul.tags li a:link, ul.tags li a:visited {
       color: #fff; }
 
-/* line 126, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 125, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 pre code {
   font-size: 14px; }
 
-/* line 127, /Users/syd/Programming/middleman-blog/source/stylesheets/style.css.scss */
+/* line 126, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 code {
   font-size: 13px; }
