@@ -24,8 +24,11 @@ header {
   margin-right: 1em;
   margin-bottom: 4em;
   padding: 0px 12px; }
+  /* line 27, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  .main-content p {
+    margin: 0 0 20px 0; }
 
-/* line 28, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 32, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .row-fluid .sidebar {
   position: relative;
   margin-left: 0px;
@@ -33,49 +36,63 @@ header {
   margin-bottom: 40px;
   float: right; }
 
-/* line 36, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 40, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .socials {
   margin-right: 12px; }
 
-/* line 40, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 44, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .nav a.social-networks {
   padding: 0; }
 
-/* line 44, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 48, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .metadata {
   font-size: 15px;
-  margin-top: 20px;
-  padding: 5px 0px;
   color: #666666; }
+  /* line 52, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  .metadata p {
+    margin: 0; }
+  /* line 56, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  .metadata span {
+    display: inline-block;
+    vertical-align: middle; }
 
-/* line 51, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 62, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+.continue-reading {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+/* line 68, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 article {
   padding-right: 60px; }
+  /* line 71, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  article h3 {
+    margin-bottom: 30px; }
 
-/* line 55, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 76, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 .recently {
   padding: 3px 5px;
   background-color: #f2f2f2;
   margin-bottom: 20px; }
 
-/* line 63, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 84, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 h3 a:link, h3 a:visited {
   color: #333333;
   text-decoration: none; }
 
-/* line 74, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 95, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 aside {
   margin-bottom: 60px;
   background-color: #EBF0F5; }
-  /* line 63, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  /* line 84, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside a:link, aside a:visited {
     color: #333333;
     text-decoration: none; }
-  /* line 76, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  /* line 97, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside p {
     font-size: 16px;
     line-height: 22px; }
-  /* line 81, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  /* line 102, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside h4 {
     font-weight: normal;
     color: #fff;
@@ -83,24 +100,24 @@ aside {
     margin: 0px;
     padding: 6px;
     letter-spacing: 1px; }
-  /* line 90, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  /* line 111, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside hr {
     margin: 10px 0;
     border-top: 1px solid #FFF;
     border-bottom: 1px solid #FFF; }
-  /* line 96, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  /* line 117, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside .recently-articles {
     padding: 8px; }
-  /* line 97, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  /* line 118, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   aside img {
     margin: 20px; }
 
-/* line 103, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 124, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 ul.tags {
   margin: 0;
   padding: 5px 8px;
   list-style: none; }
-  /* line 108, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+  /* line 129, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
   ul.tags li {
     display: inline-block;
     margin: 4px 1px;
@@ -111,14 +128,14 @@ ul.tags {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; }
-    /* line 119, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+    /* line 140, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
     ul.tags li a:link, ul.tags li a:visited {
       color: #fff; }
 
-/* line 125, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 146, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 pre code {
   font-size: 14px; }
 
-/* line 126, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
+/* line 147, /Users/syd/hello.sydd-blog/source/stylesheets/style.css.scss */
 code {
   font-size: 13px; }
