@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>達人群組發言統計</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
   <script src="jquery-1.12.2.js"></script>
   <script src="highcharts.js"></script>
   <script src="data.js"></script>
@@ -11,7 +12,7 @@
 
 <body>
   <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  <div id='select-box'>
+  <div id="select-box" style="width: 50%; margin: 10px auto 20px auto">
     <select name="post[user_id]" id="post_user_id">
     <option value="0">所有人</option>
     <option value="27">Adrian Chung</option>
@@ -58,6 +59,226 @@
     <option value="19">鍾華瑩（月貓兒）</option>
     <option value="24">阿強</option>
     <option value="18">陳大毛</option></select>
+  </div>
+  <div id="ranking" style="width: 50%; margin: 30px auto 20px auto">
+    <table class="table table-striped table-bordered">
+    <tbody><tr><td> </td>
+    <td>2016/02</td>
+    <td>2016/03</td>
+    <td>月增率(%)</td>
+    <td>總水量</td>
+    </tr>
+    <tr><td>olivia．玲</td>
+    <td>2453</td>
+    <td>4845</td>
+    <td>97.5%</td>
+    <td class="danger">7298</td>
+    </tr>
+    <tr><td>紀亭竹</td>
+    <td>1634</td>
+    <td>2224</td>
+    <td>36.1%</td>
+    <td>3858</td>
+    </tr>
+    <tr><td>Omi</td>
+    <td>999</td>
+    <td>2602</td>
+    <td>160.5%</td>
+    <td>3601</td>
+    </tr>
+    <tr><td>L 勞倫斯(LawranceLIAO</td>
+    <td>1187</td>
+    <td>2352</td>
+    <td>98.1%</td>
+    <td>3539</td>
+    </tr>
+    <tr><td>Joanne</td>
+    <td>753</td>
+    <td>2450</td>
+    <td>225.4%</td>
+    <td>3203</td>
+    </tr>
+    <tr><td>Darren</td>
+    <td>743</td>
+    <td>1990</td>
+    <td>167.8%</td>
+    <td>2733</td>
+    </tr>
+    <tr><td>鍾華瑩（月貓兒）</td>
+    <td>1120</td>
+    <td>1537</td>
+    <td>37.2%</td>
+    <td>2657</td>
+    </tr>
+    <tr><td>Cora</td>
+    <td>1666</td>
+    <td>942</td>
+    <td>-43.5%</td>
+    <td>2608</td>
+    </tr>
+    <tr><td>°*珍*°</td>
+    <td>421</td>
+    <td>1984</td>
+    <td>371.3%</td>
+    <td>2405</td>
+    </tr>
+    <tr><td>Rabin</td>
+    <td>359</td>
+    <td>1311</td>
+    <td>265.2%</td>
+    <td>1670</td>
+    </tr>
+    <tr><td>Vincent</td>
+    <td>124</td>
+    <td>1378</td>
+    <td class="danger">1011.3%</td>
+    <td>1502</td>
+    </tr>
+    <tr><td>紅茶</td>
+    <td>937</td>
+    <td>542</td>
+    <td>-42.2%</td>
+    <td>1479</td>
+    </tr>
+    <tr><td>力►Jian-Cheng Li</td>
+    <td>740</td>
+    <td>721</td>
+    <td>-2.6%</td>
+    <td>1461</td>
+    </tr>
+    <tr><td>Syd</td>
+    <td>764</td>
+    <td>630</td>
+    <td>-17.5%</td>
+    <td>1394</td>
+    </tr>
+    <tr><td>林浩克</td>
+    <td>467</td>
+    <td>541</td>
+    <td>15.8%</td>
+    <td>1008</td>
+    </tr>
+    <tr><td>mldn</td>
+    <td>0</td>
+    <td>927</td>
+    <td> - </td>
+    <td>927</td>
+    </tr>
+    <tr><td>湖水綠（JJ）</td>
+    <td>191</td>
+    <td>713</td>
+    <td>273.3%</td>
+    <td>904</td>
+    </tr>
+    <tr><td>柏安~Derek~</td>
+    <td>485</td>
+    <td>412</td>
+    <td>-15.1%</td>
+    <td>897</td>
+    </tr>
+    <tr><td>Leon</td>
+    <td>232</td>
+    <td>578</td>
+    <td>149.1%</td>
+    <td>810</td>
+    </tr>
+    <tr><td>品妤</td>
+    <td>192</td>
+    <td>557</td>
+    <td>190.1%</td>
+    <td>749</td>
+    </tr>
+    <tr><td>Joan</td>
+    <td>217</td>
+    <td>459</td>
+    <td>111.5%</td>
+    <td>676</td>
+    </tr>
+    <tr><td>楊小菊</td>
+    <td>94</td>
+    <td>571</td>
+    <td>507.4%</td>
+    <td>665</td>
+    </tr>
+    <tr><td>嘉</td>
+    <td>0</td>
+    <td>485</td>
+    <td> - </td>
+    <td>485</td>
+    </tr>
+    <tr><td>Sandy</td>
+    <td>114</td>
+    <td>295</td>
+    <td>158.8%</td>
+    <td>409</td>
+    </tr>
+    <tr><td>venner amberson</td>
+    <td>188</td>
+    <td>182</td>
+    <td>-3.2%</td>
+    <td>370</td>
+    </tr>
+    <tr><td>Anita</td>
+    <td>135</td>
+    <td>153</td>
+    <td>13.3%</td>
+    <td>288</td>
+    </tr>
+    <tr><td>LiVa〃玫咩</td>
+    <td>183</td>
+    <td>102</td>
+    <td>-44.3%</td>
+    <td>285</td>
+    </tr>
+    <tr><td>毛</td>
+    <td>82</td>
+    <td>137</td>
+    <td>67.1%</td>
+    <td>219</td>
+    </tr>
+    <tr><td>Ailsa</td>
+    <td>77</td>
+    <td>120</td>
+    <td>55.8%</td>
+    <td>197</td>
+    </tr>
+    <tr><td>奇</td>
+    <td>67</td>
+    <td>118</td>
+    <td>76.1%</td>
+    <td>185</td>
+    </tr>
+    <tr><td>白梨</td>
+    <td>77</td>
+    <td>102</td>
+    <td>32.5%</td>
+    <td>179</td>
+    </tr>
+    <tr><td>阿強</td>
+    <td>20</td>
+    <td>147</td>
+    <td>635.0%</td>
+    <td>167</td>
+    </tr>
+    <tr><td>陳大毛</td>
+    <td>88</td>
+    <td>66</td>
+    <td>-25.0%</td>
+    <td>154</td>
+    </tr>
+    <tr><td>Ruru</td>
+    <td>42</td>
+    <td>71</td>
+    <td>69.0%</td>
+    <td>113</td>
+    </tr>
+    <tr><td>Flower</td>
+    <td>53</td>
+    <td>38</td>
+    <td>-28.3%</td>
+    <td>91</td>
+    </tr>
+    </tbody></table>
   </div>
 </body>
 </html>
