@@ -1,0 +1,9 @@
+{{- /* Head custom content area start */ -}}
+{{ $customSCSS := resources.Get "css/custom.scss" | css.Sass | resources.Minify }}
+{{ if $customSCSS }}
+  <link rel="stylesheet" href="{{ $customSCSS.RelPermalink }}">
+{{ end }}
+
+<!-- Copy code button script -->
+<script src="{{ "js/copy-code.js" | absURL }}" defer></script>
+{{- /* Head custom content area end */ -}}

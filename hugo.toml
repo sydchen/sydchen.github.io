@@ -1,0 +1,25 @@
+baseURL = 'https://sydchen.github.io/'
+languageCode = 'zh-tw'
+title = 'Syd的程式開發筆記'
+theme = 'github-style'
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[pagination]
+  pagerSize = 5
+
+[params]
+  author = "Syd Chen"
+  description = "程式開發筆記，大概會寫些C++、LLM、High-Performance Computing的文章"
+  github = "sydchen"
+  avatar = "/images/avatar.png"
+  headerIcon = "/images/avatar.png"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
