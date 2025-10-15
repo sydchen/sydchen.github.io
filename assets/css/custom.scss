@@ -333,3 +333,8 @@ html[data-color-mode="dark"] {
 @media (prefers-color-scheme: dark) {
   @include toc-dark-mode;
 }
+
+// Override title max-width to show full title
+.css-truncate.css-truncate-target {
+  max-width: none !important;
+}
