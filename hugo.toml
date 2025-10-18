@@ -9,7 +9,7 @@ pygmentsUseClasses = true
   pagerSize = 5
 
 [params]
-  author = "Syd Chen"
+  author = "SYD::blog()"
   description = "程式開發筆記，大概會寫些C++、LLM、High-Performance Computing的文章"
   github = "sydchen"
   avatar = "/images/avatar.png"
