@@ -240,7 +240,7 @@ func(compare); // ❌ 模糊不清，無法決定版本
 解法是明確指定：
 
 ```cpp
-func(compare<int>); // ✅
+func(compare<int>);
 ```
 
 ---
@@ -452,7 +452,7 @@ void relay_move(T arg) {
 
 ```
 process(int&): lvalue version
-process(int&&): rvalue version ✅
+process(int&&): rvalue version
 ```
 
 這次右值正確了。但問題是——
