@@ -537,5 +537,5 @@ is lvalue: false  // 當傳入 99 時，T 被推導成 int
 更是理解現代 C++ 如何在「泛型」與「型別安全」之間達成平衡的關鍵。
 
 ---
-以上整篇說到的型別推導規則都是用於**function templates**，下一篇會講到C++17的**Class template argument deduction (CTAD)**。
+以上整篇說到的型別推導規則都是用於**function templates**，[下一篇文章](/post/cpp-class-template-argument-deduction)會講到C++17的**Class template argument deduction (CTAD)**。
 C++17 讓TAD不再只屬於 *function templates*，*class template* (類別模板)也能自動推導型別參數。
