@@ -22,15 +22,15 @@
                   </strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}"
+                  Created <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}"
                     class="no-wrap">
-                    {{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</relative-time>
+                    {{ .PublishDate.Format "January 2, 2006" }}</time>
 
                   {{ if .Site.Params.lastmod }}
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}"
+                  Modified <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}"
                     class="no-wrap">
-                    {{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</relative-time>
+                    {{ .Lastmod.Format "January 2, 2006" }}</time>
                   {{ end }}
                 </div>
               </div>
