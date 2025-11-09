@@ -189,3 +189,17 @@ body {
 .pinned-item-desc img {
   max-width: 100%;
 }
+
+/* Monospace font stack for code blocks with Unicode box-drawing support */
+code, kbd, pre, samp {
+  font-family: 'SF Mono', 'Monaco', 'Consolas', 'DejaVu Sans Mono', 'Courier New', monospace;
+  font-size: 0.95em;
+  line-height: 1.45;
+}
+
+/* Ensure proper rendering of box-drawing characters */
+pre {
+  white-space: pre;
+  overflow-x: auto;
+  font-variant-ligatures: none;
+}

@@ -846,8 +846,7 @@ CPU Vector: 39.91 ms  (約 11.22x 加速)
 3. **顯式向量化需要精細控制**：使用 intrinsics 雖然複雜，但能充分發揮硬體潛力
 4. **理論與實踐的結合**：12-16× 加速來自對硬體特性的深入理解和精心優化
 
-<!-- ### 下一步：從 CPU SIMD 到 GPU 並行 -->
+### 下一步：從 CPU SIMD 到 GPU 並行
 
-<!-- 如果你對大規模並行計算感興趣，可以繼續閱讀： -->
-<!-- - **[Mandelbrot GPU 並行化](mandelbrot-gpu-parallel.md)**：從 CPU 向量化到 GPU 大規模執行緒並行的思維轉換 -->
+如果你對大規模並行計算感興趣，可以繼續閱讀 [Mandelbrot Set 的 GPU 並行化優化](../mandelbrot-gpu-parallel/)
 
